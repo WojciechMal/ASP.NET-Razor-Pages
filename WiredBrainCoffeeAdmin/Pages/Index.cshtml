@@ -9,6 +9,7 @@
     <hr />
     <div class="row">
         <div class="col-md-6">
+<<<<<<< HEAD
             <h2>Latest Products</h2>
 
             @*@await Component.InvokeAsync("ProductList", new { count = 5})*@
@@ -21,6 +22,10 @@
                         <th>Answer</th>
                     </tr>
                 </thead>
+=======
+            <h2>Latest Survey Results</h2>
+            <table class="table table-striped table-bordered">
+>>>>>>> 58e593140d76c362fb18aab72268c732768077d1
                 @foreach (var item in Model.SurveyResults)
                 {
                     <tr>
@@ -41,10 +46,16 @@
                         var temperature = 55;
                     }
                     <p>The current temperature is @temperature degrees.</p>
+<<<<<<< HEAD
                     @if (temperature < 60)
                     {
                         <p>
                             We recommend a coat until it warms up
+=======
+                    @if (temperature<60)
+                    {
+                        <p>We recommend a coat until it warms up
+>>>>>>> 58e593140d76c362fb18aab72268c732768077d1
                             @(60 - temperature) degrees.
                         </p>
                     }
