@@ -11,6 +11,12 @@ builder.Services.AddDbContext<WiredContext>(options =>
     );
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 
+builder.Services.AddHttpClient<ITicketService, TicketService>(client => 
+    client.BaseAddress = 
+    new Uri("https://wiredbraincoffeeadmin.azurewebsites.net/"));
+
+builder.Services.AddHttpClient();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
